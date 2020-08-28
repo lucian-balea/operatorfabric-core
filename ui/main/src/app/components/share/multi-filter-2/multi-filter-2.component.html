@@ -8,12 +8,17 @@
 
 
 
-<form [formGroup]="form">
-  <div class="form-group">
-    <label for="setting" translate>settings.{{settingPath}}</label>
-    <select class="form-control" id="setting" formControlName="setting" [attr.required]="requiredField">
-      <option *ngFor="let v of preparedList" value="{{v.id}}">{{v.label|async}}</option>
+<div [formGroup]="parentForm">
+    <!-- archive.filters.{{filterPath}} -->
+    <label translate>{{computeI18nLabelKey()}}</label>
+    <angular2-multiselect [data]="dropdownList"
+                          [(ngModel)]="selectedItems"
+                          [settings]="dropdownSettings"
+                          formControlName="{{filterPath}}"
+    ></angular2-multiselect>
+    <!--
+    <select multiple class="form-control" size='2' [formControlName]="">
+        <option *ngFor="let v of preparedList" value="{{v.id}}">{{v.itemName|async}}</option>
     </select>
-    <span class="text-danger" *ngIf="!form.valid">Incorrect submission</span>
-  </div>
-</form>
+    -->
+</div>

@@ -51,7 +51,11 @@ export class MonitoringComponent implements OnInit, OnDestroy, AfterViewInit {
                 Array.prototype.forEach.call(allProcesses, (proc: Process) => {
                     const id = proc.id;
                     this.mapOfProcesses.set(id, proc);
-                    filterValue.push({value: id, label: proc.name});
+                    let itemName = proc.name;
+                    if (!itemName) {
+                        itemName = id;
+                    }
+                    filterValue.push({id: id, itemName: itemName, i18nPrefix: `${proc.id}.${proc.version}` });
                 });
                 return filterValue;
             })
@@ -108,6 +112,7 @@ export class MonitoringComponent implements OnInit, OnDestroy, AfterViewInit {
         this.store.dispatch(new ApplyFilter(BUSINESS_DATE_FILTER_INITIALISATION));
 
     }
+
     ngOnDestroy() {
         this.unsubscribe$.next();
         this.unsubscribe$.complete();

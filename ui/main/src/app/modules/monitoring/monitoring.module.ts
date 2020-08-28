@@ -20,6 +20,8 @@ import { MonitoringPageComponent } from './components/monitoring-table/monitorin
 import {DatetimeFilterModule} from '../../components/share/datetime-filter/datetime-filter.module';
 import {MultiFilterModule} from '../../components/share/multi-filter/multi-filter.module';
 import {AppRoutingModule} from '../../app-routing.module';
+import {AngularMultiSelect, AngularMultiSelectModule} from 'angular2-multiselect-dropdown';
+import {MultiFilter2Module} from '../../components/share/multi-filter-2/multi-filter-2.module';
 
 
 
@@ -40,6 +42,7 @@ import {AppRoutingModule} from '../../app-routing.module';
       , DatetimeFilterModule
       , MultiFilterModule
       , AppRoutingModule
+      , MultiFilter2Module
   ]
 })
 export class MonitoringModule { }
