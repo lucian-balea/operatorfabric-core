@@ -29,6 +29,8 @@ import {GlobalStyleService} from "@ofServices/global-style.service";
 import { AppService } from './app.service';
 import { GroupsService } from './groups.service';
 import { EntitiesService } from './entities.service';
+import { ExportService } from './export.service';
+
 
 @NgModule({
     imports: [
@@ -38,6 +40,7 @@ import { EntitiesService } from './entities.service';
         ConfigService,
         SettingsService,
         CardService,
+        ExportService,
         AuthenticationService,
         TimeService,
         ProcessesService,

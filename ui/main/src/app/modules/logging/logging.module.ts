@@ -7,18 +7,18 @@
  * This file is part of the OperatorFabric project.
  */
 
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {CardsModule} from '../cards/cards.module';
-import {TranslateModule} from '@ngx-translate/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {LoggingTableComponent} from './components/logging-table/logging-table.component';
-import {LoggingComponent} from './logging.component';
-import {LoggingFiltersComponent} from './components/logging-filters/logging-filters.component';
-import {DatetimeFilterModule} from '../../components/share/datetime-filter/datetime-filter.module';
-import {MultiFilterModule} from '../../components/share/multi-filter/multi-filter.module';
-import {LoggingPageComponent} from './components/logging-table/logging-page/logging-page.component';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CardsModule } from '../cards/cards.module';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoggingTableComponent } from './components/logging-table/logging-table.component';
+import { LoggingComponent } from './logging.component';
+import { LoggingFiltersComponent } from './components/logging-filters/logging-filters.component';
+import { DatetimeFilterModule } from '../../components/share/datetime-filter/datetime-filter.module';
+import { MultiFilterModule } from '../../components/share/multi-filter/multi-filter.module';
+import { LoggingPageComponent } from './components/logging-table/logging-page/logging-page.component';
 
 
 @NgModule({
@@ -33,11 +33,11 @@ import {LoggingPageComponent} from './components/logging-table/logging-page/logg
         , MultiFilterModule
     ],
     declarations: [
-    LoggingComponent,
-    LoggingTableComponent,
-    LoggingFiltersComponent,
-    LoggingPageComponent
-]
+        LoggingComponent,
+        LoggingTableComponent,
+        LoggingFiltersComponent,
+        LoggingPageComponent
+    ]
 })
 export class LoggingModule {
 }

@@ -35,6 +35,7 @@ export class MonitoringComponent implements OnInit, OnDestroy, AfterViewInit {
 
     monitoringResult$: Observable<LineOfMonitoringResult[]>;
     unsubscribe$: Subject<void> = new Subject<void>();
+    monitoringResultsData: Array<any> = [];
 
     mapOfProcesses = new Map<string, Process>();
     processValueForFilter: Observable<any>;
