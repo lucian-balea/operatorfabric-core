@@ -5,7 +5,7 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
   DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
   SOURCE="$(readlink "$SOURCE")"
   [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
-done
+done<project xmlns=
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 OF_HOME=$(realpath $DIR/..)
 CURRENT_PATH=$(pwd)
