@@ -42,7 +42,7 @@ export class LoggingTableComponent implements OnInit, OnDestroy, OnChanges {
     }
 
     ngOnChanges() {
-        this.initExportLoggingData();
+        //this.initExportLoggingData();
     }
 
 
@@ -81,11 +81,12 @@ export class LoggingTableComponent implements OnInit, OnDestroy, OnChanges {
                         });
                     }
                 });
+                this.exportService.exportAsExcelFile(this.exportLoggingData, "Logging");
             });
     }
 
     export(): void {
-        this.exportService.exportAsExcelFile(this.exportLoggingData, "Logging");
+        this.initExportLoggingData();
     }
 
     translateColomn(key: string | Array<string>, interpolateParams?: Object): any {

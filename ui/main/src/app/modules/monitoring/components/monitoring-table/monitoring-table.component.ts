@@ -45,7 +45,7 @@ export class MonitoringTableComponent implements OnInit, OnDestroy{
 
 
     ngOnInit() {
-        this.initExportMonitoringData();
+        //this.initExportMonitoringData();
     }
 
     initExportMonitoringData(): void {
@@ -75,6 +75,7 @@ export class MonitoringTableComponent implements OnInit, OnDestroy{
     }
 
     export(): void{
+        this.initExportMonitoringData();
         this.exportService.exportAsExcelFile(this.exportMonitoringData, "Monitoring");
     }
 
